@@ -1,0 +1,15 @@
+<ul>
+{{#each model as |chat|}}
+<li>
+  <div><strong>{{chat.owner.name}}</strong></div>
+  <div><i>{{chat.timestamp}}</i></div>
+  <div>{{chat.text}}</div>
+</li>
+{{/each}}
+<li>
+  <form {{action 'postMessage' on='submit'}}>
+    {{input value=newMessage}}
+  </form>
+</li>
+</ul>
+{{outlet}}

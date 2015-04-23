@@ -13,8 +13,8 @@ export default Ember.Route.extend({
   actions: {
     postMessage: function() {
       this.get('store').createRecord('message', {
-        text: this.get('controller.newMessage'),
-        owner: this.get('session.user')
+        message: this.get('controller.newMessage'),
+        user: this.get('session.user')
       }).save();
       this.set('controller.newMessage', '');
     }

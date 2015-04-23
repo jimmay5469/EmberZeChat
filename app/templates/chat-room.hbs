@@ -1,9 +1,9 @@
 <ul>
 {{#each model as |chat|}}
 <li>
-  <div><strong>{{chat.owner.name}}</strong></div>
-  <div><i>{{chat.timestamp}}</i></div>
-  <div>{{chat.text}}</div>
+  <div><strong>{{chat.user.username}}</strong></div>
+  <div><i>{{chat.createdAt}}</i></div>
+  <div>{{chat.message}}</div>
 </li>
 {{/each}}
 <li>
